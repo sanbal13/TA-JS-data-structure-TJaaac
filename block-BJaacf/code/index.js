@@ -6,11 +6,11 @@ let sum = 0;
 for(let number of numbers) {
     sum += number;
 }
-console.log('Sum: ${sum}');
+console.log(`Sum: ${sum}`);
 
 // 3. Calculate the average of array items and print it to the console using console.log()
 let avg = sum/(numbers.length);
-console.log('Average: ${avg}');
+console.log(`Average: ${avg}`);
 
 // 4. Find the highest number in the array and print it to the console using console.log()
 let highest = numbers[0];
@@ -19,7 +19,7 @@ for(let number of numbers) {
         highest = number;
     }
 }
-console.log('Highest: ${highest}');
+console.log(`Highest: ${highest}`);
 
 // 5. Find the lowest number in the array and print it to the console using console.log()
 let lowest = numbers[0];
@@ -28,39 +28,39 @@ for(let number of numbers) {
         lowest = number;
     }
 }
-console.log('Lowest: ${lowest}');
+console.log(`Lowest: ${lowest}`);
 
 
 // 6. Find the even numbers in the array and print them to the console using console.log()
 
 for(let number of numbers) {
     if(number % 2 == 0) {
-        console.log(number);
+        console.log(number, "even number");
     }
 }
 
 // 7. Find the odd numbers in the array and print them to the console using console.log()
 for(let number of numbers) {
     if(number % 2 != 0) {
-        console.log(number);
+        console.log(number, "odd number");
     }
 }
 
 // 8. Find the numbers in the array that is divisible by 5 and print them to the console using console.log()
 for(let number of numbers) {
     if(number % 5 == 0) {
-        console.log(number);
+        console.log(number, "divisible by 5");
     }
 }
 
 // 9. Log all the element of the array one by one
 for(let number of numbers) {
-    console.log(number);    
+    console.log(number, "all the elements");    
 }
 
 // 10. Find all the number in the array that is divisible by 3
 for(let number of numbers) {
-    if(number % 3 != 0) {
-        console.log(number);
+    if(number % 3 == 0) {
+        console.log(number, "divisible by 3");
     }
 }

@@ -24,10 +24,10 @@ let newUser = user;
 - `user.name == newUser.name;` // true
 - `user.sibling == newUser.sibling;` // true
 - `user.sibling === newUser.sibling;` // true
-- `user.sibling == allBrothers;` // true
+- `user.sibling == allBrothers;` // false
 - `user.sibling === allBrothers;` // false //these are different objects
 - `brothersCopy === allBrothers;` // false //these are different objects
-- `brothersCopy == allBrothers;` // true 
+- `brothersCopy == allBrothers;` // false
 - `brothersCopy == user.sibling;` // true
 - `brothersCopy === user.sibling;` // true
 - `brothersCopy[0] === user.sibling[0];` // true

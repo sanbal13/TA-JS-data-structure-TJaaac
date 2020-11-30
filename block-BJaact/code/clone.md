@@ -104,7 +104,9 @@ let blogs = [
 ];
 
 // Your code goes here
-let clonedBlogs = [{...blogs[0]}, {...blogs[1]}, {...blogs[2]}];
+let clonedBlogs = [{...blogs[0]}, 
+                   {...blogs[1]},
+                   {...blogs[2]}];
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -130,7 +132,8 @@ var questions = [
 ];
 
 // Your code goes here
-let questionClone = [{...questions[0]}, {...questions[1]}];
+let questionClone = [{...questions[0], responses: [...questions[0].responses]},
+                     {...questions[1], responses: [...questions[1].responses]}];
 
 ```
 
@@ -159,7 +162,9 @@ var allBlogs = {
 };
 
 // Your code goes here
-let allBlogsClone = {...allBlogs, author: {...allBlogs.author} ,comments: {allblogs.comments}, {...allblogs.comments[0]}, {...allblogs.comments[1]}}
+let allBlogsClone = {...allBlogs, 
+                     author: {...allBlogs.author},
+                     comments: [{...allBlogs.comments[0]}, {...allBlogs.comments[1]}]};
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -193,7 +198,13 @@ let person = [
 ];
 
 // Your code goes here
-let clonedPerson = [...person, : {...person[0]}];
+let clonedPerson = [{...person[0],input: {...person[0].input}, output: {...person[0].output}},
+                    {...person[1],input: {...person[1].input, name: {...person[1].input.name}}, 
+                                           output: {...person[1].output}},
+                    {...person[2],input: {...person[2].input}, output: {...person[2].output}},
+                    {...person[3],input: {...person[3].input,name: {...person[3].input.name},
+                                           birthday: {...person[3].input.birthday}}, 
+                                           output: {...person[3].output}}];
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
@@ -201,6 +212,7 @@ let clonedPerson = [...person, : {...person[0]}];
 ```js
 function cloneObject(obj) {
   // your code
+  return JSON.parse(JSON.stringify(obj));
 }
 
 // Run the test below to check your function
